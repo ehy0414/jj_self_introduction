@@ -28,7 +28,7 @@ const HomePage = () => {
   return (
     <Wrapper>
       <Container>
-        <h1>나의 자기소개 페이지</h1>
+        <h1>나의 자기소개 페이지s</h1>
 
           <BoxContainer>
             <div>이름: {profile.name}</div>
