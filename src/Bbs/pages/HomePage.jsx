@@ -13,7 +13,8 @@ const HomePage = () => {
   // 데이터 받아오기
   const getprofile = async () => {
     try {
-      const response = await api.get("/profile"); 
+      const response = await api.get(`/profile/${d1eb}`); 
+      // console.log(response.data);
       setprofile(response.data);
     } catch (error) {
       console.error(error);
@@ -28,10 +29,15 @@ const HomePage = () => {
     <Wrapper>
       <Container>
         <h1>나의 자기소개 페이지</h1>
-        <BoxContainer> 이름: {profile.name}</BoxContainer>
-        <BoxContainer> 직업: {profile.job}</BoxContainer>
-        <BoxContainer> 나이: {profile.age}</BoxContainer>
-        <BoxContainer> 근무지,학교: {profile.school}</BoxContainer>
+
+          <BoxContainer>
+            <div>이름: {profile.name}</div>
+            <div>직업: {profile.job}</div>
+            <div>나이: {profile.age}</div>
+            <div>근무지,학교: {profile.school}</div>
+          </BoxContainer>
+
+
 
         <ButtonContainer>
           <StyledButton onClick={() => {navigate("/bbs-Write")}}>

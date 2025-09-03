@@ -17,7 +17,7 @@ const WritePage = () => {
 
 
   const onChange = (event) => {
-    setForm({ ...form, [event.target.name]: event.target.value });      
+    setForm({ ...form, [event.target.name]: event.target.value });
   };          // 위에서 단일값이 아닌 객체형을 했을 때는 이렇게 여러개를 할 수 있는 걸로 //여러 입력값(name, job, age 등)을 하나의 객체로 묶어서 관리할 때 사용
 
   
@@ -40,7 +40,7 @@ const WritePage = () => {
     <Wrapper>
       <Container>
         <h1>자기소개 작성</h1>
-<Form onSubmit={proSave}>
+      <Form>
         <BoxContainer>
           <label> 이름:
                 <TextInput  type="text" name="name" 
@@ -74,7 +74,7 @@ const WritePage = () => {
           </BoxContainer>
 </Form>
           <ButtonContainer>
-                    <Button title="글 작성하기" type="submit" />
+                    <button title="글 작성하기" type="button" onClick={proSave} >글 작성하기</button>
                     &nbsp;&nbsp;&nbsp;
 
                     <Button title = "뒤로가기"
